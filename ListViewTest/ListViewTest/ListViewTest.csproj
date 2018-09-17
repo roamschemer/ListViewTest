@@ -5,8 +5,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <None Remove="Resources\伊集院メイ.JPG" />
+    <None Remove="Resources\佐倉楓子.JPG" />
+    <None Remove="Resources\藤崎詩織.JPG" />
+    <None Remove="Resources\陽ノ下光.JPG" />
+    <None Remove="Resources\麻生華澄.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\伊集院メイ.JPG" />
+    <EmbeddedResource Include="Resources\佐倉楓子.JPG" />
+    <EmbeddedResource Include="Resources\藤崎詩織.JPG" />
+    <EmbeddedResource Include="Resources\陽ノ下光.JPG" />
+    <EmbeddedResource Include="Resources\麻生華澄.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReactiveProperty" Version="5.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.0.0.396" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ImageCellPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewCellPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

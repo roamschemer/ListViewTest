@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ListViewTest.Views.ListViewPage"
+             Title="ListView">
+
+    <StackLayout>
+        <Label Text="{Binding Text.Value}"/>
+        <ListView ItemsSource="{Binding ListView}" SelectedItem="{Binding SelectItem.Value}"/>
+    </StackLayout>
+
+</ContentPage>

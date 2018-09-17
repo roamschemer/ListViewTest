@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ListViewTest.Views.ViewCellPage"
+             Title="ViewCell">
+
+    <StackLayout>
+        <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding ListView}" SelectedItem="{Binding SelectItem.Value}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" TextColor="Pink" 
+                                   Text="{Binding Title}" />
+                            <Label Grid.Column="1" HorizontalTextAlignment = "End"
+                                   Text="{Binding Detail.Value}" />
+                            <Button Grid.Column="2" Text="入力"
+                                    Command="{Binding Input}" />
+                            <Button Grid.Column="3" Text="消去"
+                                    Command="{Binding Delete}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

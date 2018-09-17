@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:cv="clr-namespace:ListViewTest.Converters"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ListViewTest.Views.ImageCellPage"
+             Title="ImageCell">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <cv:ImageSourceConverter x:Key="ImageSourceConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="{Binding Text.Value}"/>
+        <ListView ItemsSource="{Binding ListView}" SelectedItem="{Binding SelectItem.Value}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Title}" Detail="{Binding Target}" ImageSource="{Binding Image, Converter={StaticResource ImageSourceConverter}}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

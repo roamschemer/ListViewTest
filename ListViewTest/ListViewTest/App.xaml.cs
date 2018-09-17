@@ -31,6 +31,9 @@ namespace ListViewTest
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<ListViewPage>();
+            containerRegistry.RegisterForNavigation<ImageCellPage>();
+            containerRegistry.RegisterForNavigation<ViewCellPage>();
         }
     }
 }

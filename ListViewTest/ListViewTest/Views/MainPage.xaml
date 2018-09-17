@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ListViewTest.Views.MainPage"
-             Title="{Binding Title}">
+             Title="ListViewTest">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button Text="ListView" Command="{Binding PageChangeButton}" CommandParameter="ListViewPage"/>
+        <Button Text="ListView ImageCell" Command="{Binding PageChangeButton}" CommandParameter="ImageCellPage"/>
+        <Button Text="ListView ViewCell" Command="{Binding PageChangeButton}" CommandParameter="ViewCellPage"/>
     </StackLayout>
-
+    
 </ContentPage>
